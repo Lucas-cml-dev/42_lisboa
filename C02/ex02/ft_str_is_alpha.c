@@ -20,11 +20,13 @@ int	ft_str_is_alpha(char *str)
 	cd = 0;
 	if (str[cd] == '\0')
 		return (1);
-	while ((str[cd] >= 'A' && str[cd] <= 'Z')
-		|| (str[cd] >= 'a' && str[cd] <= 'z'))
+	while	(str[cd])
+	{
+		if (!((str[cd] >= 'A' && str[cd] <= 'Z')
+		|| (str[cd] >= 'a' && str[cd] <= 'z')))
+			return (0);
 		cd++;
-	if (str[cd] == '\0')
-		return (1);
+	} return (1);
 }
 /*
 int	main(void)
